@@ -207,8 +207,10 @@ code {
 .hero-text,
 .section-head p,
 .project-copy p,
+.status-card p,
 .workflow-step p,
 .profile-card p,
+.status-note,
 .quote-note {
   color: var(--muted);
   line-height: 1.72;
@@ -267,6 +269,7 @@ code {
 }
 
 .hero-stats article,
+.status-card,
 .workflow-step,
 .community-card,
 .profile-card,
@@ -401,6 +404,7 @@ code {
 }
 
 .project-grid,
+.status-grid,
 .workflow-grid,
 .community-grid,
 .profile-section {
@@ -410,6 +414,10 @@ code {
 }
 
 .project-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.status-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
@@ -459,6 +467,7 @@ code {
 }
 
 .project-copy h3,
+.status-card h3,
 .community-card h3,
 .workflow-step h3,
 .quote {
@@ -468,6 +477,17 @@ code {
 
 .project-copy p {
   margin: 14px 0 0;
+}
+
+.status-card p {
+  margin: 14px 0 0;
+}
+
+.status-note {
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .feature-list {
@@ -553,6 +573,27 @@ code {
     background-color 180ms ease;
 }
 
+.status-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.status-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+}
+
 .resource-link span:first-child {
   color: var(--muted);
 }
@@ -566,6 +607,12 @@ code {
   color: var(--text);
   background: rgba(255, 255, 255, 0.03);
   border-style: dashed;
+}
+
+.status-link-placeholder {
+  cursor: default;
+  border-style: dashed;
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .resource-link-placeholder:hover {
@@ -637,6 +684,7 @@ code {
   .site-header,
   .hero,
   .project-grid,
+  .status-grid,
   .workflow-grid,
   .community-grid,
   .profile-section,
@@ -725,6 +773,7 @@ code {
   }
 
   .project-copy,
+  .status-card,
   .workflow-step,
   .community-card,
   .profile-card,

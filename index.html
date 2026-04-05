@@ -1,67 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Pratik Gondane</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Pratik Gondane</h1>
-        <p>Computer Science Enthusiast | Developer | Gamer</p>
-        <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark/Light Mode</button>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                I have completed a diploma in Computer Engineering, a degree in Computer Science and Engineering, and a Master's in Computer Science and Engineering. I am passionate about coding, gaming, and birdwatching. 
-                My hobbies include customizing ROMs and exploring new trends in NLP, AI, and Machine Learning.
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pratik Lab | Lenovo TB351FU Projects</title>
+    <meta
+      name="description"
+      content="A polished GitHub Pages hub for Lenovo Tab Plus TB351FU projects, unlock workflows, firmware helpers, and community links."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!--
+      Quick links to edit later:
+      GitHub profile: https://github.com/helllopratik
+      GitHub Pages: https://helllopratik.github.io/portfolio/
+      XDA page: [link here]
+      Telegram page: [link here]
+      YouTube page: [link here]
+    -->
+
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="Pratik Lab home">
+          <span class="brand-mark">PG</span>
+          <span class="brand-copy">
+            <strong>Pratik Lab</strong>
+            <small>Lenovo TB351FU tools and pages</small>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#projects">Projects</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#community">Community</a>
+          <a href="#profile">Profile</a>
+        </nav>
+
+        <a class="header-link" href="#community">Links</a>
+      </header>
+
+      <main>
+        <section class="hero reveal" id="top">
+          <div class="hero-copy">
+            <p class="eyebrow">GitHub Pages hub for Android device work</p>
+            <h1>Sharper presentation for your Lenovo Tab Plus TB351FU projects.</h1>
+            <p class="hero-text">
+              This landing page brings your unlock and firmware tools into one
+              cleaner public front page. It is built to look more standard,
+              more attractive, and easier for visitors to trust at first glance.
             </p>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="https://github.com/helllopratik/evolution_device_kunlun2_row" target="_blank">Device Tree for Android 15</a>: Enables AOSP to understand Lenovo K10 Note configurations.</li>
-                <li><a href="https://github.com/helllopratik/evolution_kernel_lenovo_sdm710" target="_blank">Kernel Tree for Android 15</a>: Facilitates OS-to-hardware communication for SDM710-based devices.</li>
-                <li><a href="https://github.com/helllopratik/emotion_chat_with_chatgpt" target="_blank">EmoQuery</a>: AI project combining user emotion with conversation dynamics.</li>
-            </ul>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Programming: C, Java, C++, Python, JavaScript</li>
-                <li>Web Development: HTML, CSS, React</li>
-                <li>Others: Emotion Detection, Video Analysis</li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:hellopratik@proton.me">hellopratik@proton.me</a></p>
-            <p>GitHub: <a href="https://github.com/helllopratik" target="_blank">github.com/helllopratik</a></p>
-            <p>Instagram: <a href="https://instagram.com/hellopratik" target="_blank">instagram.com/hellopratik</a></p>
-        </section>
-    </main>
-    <footer>
-        <p>© 2024 Pratik Bhaskar Gondane. All Rights Reserved.</p>
-    </footer>
 
-    <script>
-        let isDarkMode = false;
+            <div class="hero-actions">
+              <a
+                class="button button-primary"
+                href="https://github.com/helllopratik"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub Profile
+              </a>
+              <a class="button button-secondary" href="#projects">
+                Explore Projects
+              </a>
+            </div>
 
-        function toggleDarkMode() {
-            isDarkMode = !isDarkMode;
-            document.body.className = isDarkMode ? "dark-mode" : "light-mode";
-        }
-    </script>
-</body>
+            <div class="hero-stats" aria-label="Project highlights">
+              <article>
+                <strong>2</strong>
+                <span>featured TB351FU repositories</span>
+              </article>
+              <article>
+                <strong>Linux-first</strong>
+                <span>workflow and tooling direction</span>
+              </article>
+              <article>
+                <strong>Editable</strong>
+                <span>community links and future YouTube slot</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-frame">
+              <div class="hero-frame-label">Featured visual</div>
+              <img
+                src="assets/unlock-banner.svg"
+                alt=""
+                class="hero-banner"
+                loading="eager"
+              />
+            </div>
+
+            <div class="floating-card floating-card-top">
+              <span>Unlock Flow</span>
+              <p>Token generation, flash prep, and fastboot verification.</p>
+            </div>
+
+            <div class="floating-card floating-card-bottom">
+              <span>Firmware Helper</span>
+              <p>Decrypt Lenovo metadata and prepare a flash-ready XML bundle.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section reveal" id="projects">
+          <div class="section-head">
+            <p class="eyebrow">Featured Projects</p>
+            <h2>Focused tools for the TB351FU workflow</h2>
+            <p>
+              These two repositories tell a clear story together: prepare the
+              firmware assets correctly, then move into the unlock workflow with
+              less manual friction.
+            </p>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-media">
+                <img
+                  src="assets/unlock-banner.svg"
+                  alt="Lenovo Tab Plus TB351FU one-click bootloader unlock banner"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-copy">
+                <div class="project-meta">
+                  <span class="pill">Experimental</span>
+                  <span class="pill">TB351FU only</span>
+                  <span class="pill">Linux workflow</span>
+                </div>
+                <h3>Lenovo Tab Plus (TB351FU) One-Click Bootloader Unlock</h3>
+                <p>
+                  A Linux-first helper built around <code>mtkclient</code> and
+                  <code>SP Flash Tool v6</code> to guide a two-stage unlock
+                  process for the Lenovo Tab Plus.
+                </p>
+
+                <ul class="feature-list">
+                  <li>Generates a device-specific unlock token.</li>
+                  <li>Works with supplied Lenovo auth and flash assets.</li>
+                  <li>Finishes with fastboot unlock-state verification.</li>
+                </ul>
+
+                <div class="project-links">
+                  <a
+                    class="inline-link"
+                    href="https://github.com/helllopratik/lenovo_tb351fu_bootloader_unlock"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    View GitHub Repo
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-media">
+                <img
+                  src="assets/xml-helper-banner.svg"
+                  alt="Lenovo Flash XML Helper for TB351FU banner"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-copy">
+                <div class="project-meta">
+                  <span class="pill">Firmware prep</span>
+                  <span class="pill">SP Flash Tool</span>
+                  <span class="pill">Linux-friendly</span>
+                </div>
+                <h3>Lenovo Flash XML Helper for TB351FU</h3>
+                <p>
+                  A helper that decrypts Lenovo <code>.x</code> firmware
+                  metadata, validates the XML, and stages an easier-to-load
+                  bundle for <code>SP Flash Tool</code>.
+                </p>
+
+                <ul class="feature-list">
+                  <li>Decrypts <code>flash.x</code> and scatter metadata.</li>
+                  <li>Validates XML structure and referenced image files.</li>
+                  <li>Builds a ready-to-stage <code>sp_flash_tool_bundle/</code>.</li>
+                </ul>
+
+                <div class="project-links">
+                  <a
+                    class="inline-link"
+                    href="https://github.com/helllopratik/lenovo_flash_xml_helper_TB351FU"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    View GitHub Repo
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section reveal" id="workflow">
+          <div class="section-head">
+            <p class="eyebrow">Workflow</p>
+            <h2>How the tools fit together</h2>
+            <p>
+              Visitors should quickly understand that your repositories are not
+              random uploads. They form a connected workflow around Lenovo
+              firmware preparation and bootloader unlocking.
+            </p>
+          </div>
+
+          <div class="workflow-grid">
+            <article class="workflow-step">
+              <span>01</span>
+              <h3>Collect the official package</h3>
+              <p>
+                Start with the correct TB351FU firmware package and confirm the
+                device-specific files match the target tablet.
+              </p>
+            </article>
+
+            <article class="workflow-step">
+              <span>02</span>
+              <h3>Decrypt Lenovo metadata</h3>
+              <p>
+                Use the XML helper to convert encrypted <code>.x</code> files
+                into usable XML, then validate the package structure.
+              </p>
+            </article>
+
+            <article class="workflow-step">
+              <span>03</span>
+              <h3>Generate unlock data</h3>
+              <p>
+                Move into the bootloader unlock repo to run the guided token
+                generation stage with <code>mtkclient</code>.
+              </p>
+            </article>
+
+            <article class="workflow-step">
+              <span>04</span>
+              <h3>Flash and verify</h3>
+              <p>
+                Load the prepared flash assets, complete the final unlock
+                routine, and confirm the bootloader state in fastboot.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section reveal" id="community">
+          <div class="section-head">
+            <p class="eyebrow">Community Links</p>
+            <h2>Public pages and contact points</h2>
+            <p>
+              This block keeps the GitHub Pages link visible and leaves clear
+              placeholders for pages you want to add later. Search for
+              <code>[link here]</code> in the code when you want to replace the
+              placeholders.
+            </p>
+          </div>
+
+          <div class="community-grid">
+            <article class="community-card">
+              <h3>External pages</h3>
+              <div class="resource-list">
+                <a
+                  class="resource-link"
+                  href="https://helllopratik.github.io/portfolio/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>GitHub Pages</span>
+                  <strong>helllopratik.github.io/portfolio/</strong>
+                </a>
+
+                <a
+                  class="resource-link"
+                  href="https://github.com/helllopratik"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>GitHub Profile</span>
+                  <strong>github.com/helllopratik</strong>
+                </a>
+
+                <span class="resource-link resource-link-placeholder">
+                  <span>XDA Page</span>
+                  <strong>[link here]</strong>
+                </span>
+
+                <span class="resource-link resource-link-placeholder">
+                  <span>Telegram Page</span>
+                  <strong>[link here]</strong>
+                </span>
+
+                <span class="resource-link resource-link-placeholder">
+                  <span>YouTube Page</span>
+                  <strong>[link here]</strong>
+                </span>
+              </div>
+            </article>
+
+            <article class="community-card">
+              <h3>What this page communicates</h3>
+              <ul class="feature-list feature-list-compact">
+                <li>These projects are focused on Lenovo Tab Plus TB351FU.</li>
+                <li>Linux is the main host environment in the workflow.</li>
+                <li>Safety matters because flashing and unlocking are risky.</li>
+                <li>Community links are ready to grow as your audience grows.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section profile-section reveal" id="profile">
+          <article class="profile-card">
+            <p class="eyebrow">Profile</p>
+            <h2>HelloPratik</h2>
+            <p>
+              Focused on Android OS development, Linux workflows, firmware
+              tooling, and practical device experimentation. This site gives
+              your work a cleaner public home than a raw repository list.
+            </p>
+
+            <div class="profile-actions">
+              <a
+                class="button button-secondary"
+                href="https://github.com/helllopratik"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open GitHub
+              </a>
+              <a
+                class="button button-secondary"
+                href="https://twitter.com/hello_pratik"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open X Profile
+              </a>
+            </div>
+          </article>
+
+          <aside class="quote-card">
+            <p class="quote">
+              “Learn deeply. Break responsibly. Build fearlessly.”
+            </p>
+            <p class="quote-note">
+              A stronger landing page helps people understand the work before
+              they even open the repositories.
+            </p>
+          </aside>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>Built for GitHub Pages and ready to publish.</p>
+        <p>© <span id="year"></span> Pratik Lab</p>
+      </footer>
+    </div>
+  </body>
 </html>

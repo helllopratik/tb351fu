@@ -6,7 +6,7 @@
     <title>TB351FU Dev Hub | Lenovo Tab Plus</title>
     <meta
       name="description"
-      content="Unofficial Lenovo Tab Plus TB351FU development hub with unlock tools, firmware helpers, download links, and recovery and ROM status updates."
+      content="Community-maintained Lenovo Tab Plus TB351FU page with unlock tools, flashing helpers, download links, and ongoing recovery and custom OS work."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
   </head>
-  <body>
+  <body data-theme="ocean">
     <!--
       GitHub Pages: https://helllopratik.github.io/tb351fu/
       GitHub profile: https://github.com/helllopratik
@@ -48,19 +48,33 @@
           <a href="#about">About</a>
         </nav>
 
-        <a class="header-link" href="#links">Downloads</a>
+        <div class="header-actions">
+          <div class="theme-switcher" role="group" aria-label="Choose color theme">
+            <button class="theme-button" type="button" data-theme-value="ocean">
+              Ocean
+            </button>
+            <button class="theme-button" type="button" data-theme-value="graphite">
+              Graphite
+            </button>
+            <button class="theme-button" type="button" data-theme-value="amoled">
+              AMOLED
+            </button>
+          </div>
+
+          <a class="header-link" href="#links">Downloads</a>
+        </div>
       </header>
 
       <main>
         <section class="hero reveal" id="top">
           <div class="hero-copy">
             <p class="eyebrow">Lenovo Tab Plus TB351FU</p>
-            <h1>Tools, links and ongoing development for the TB351FU.</h1>
+            <h1>Lenovo Tab Plus TB351FU resources in one place.</h1>
             <p class="hero-text">
-              This page brings together the current unlock tools, firmware
-              helpers, downloads and development status for the Lenovo Tab Plus
-              TB351FU. If you are working on this device, the main starting
-              points are below.
+              Use this page to find the current bootloader unlock tools,
+              firmware helpers, download links and development status for the
+              Lenovo Tab Plus TB351FU. If you are testing, flashing or building
+              for this device, start here.
             </p>
 
             <div class="hero-actions">
@@ -104,25 +118,25 @@
             </div>
           </div>
 
-          <div class="hero-visual" aria-hidden="true">
+          <div class="hero-visual">
             <div class="hero-frame">
-              <div class="hero-frame-label">Current project</div>
+              <div class="hero-frame-label">Lenovo Tab Plus</div>
               <img
-                src="assets/unlock-banner.svg"
-                alt=""
-                class="hero-banner"
+                src="assets/lenovotab.jpeg"
+                alt="Lenovo Tab Plus TB351FU tablet"
+                class="hero-banner hero-device-photo"
                 loading="eager"
               />
             </div>
 
             <div class="floating-card floating-card-top">
               <span>Available now</span>
-              <p>Bootloader unlock and firmware prep tools are already public.</p>
+              <p>Main unlock and firmware prep tools are already public and usable.</p>
             </div>
 
             <div class="floating-card floating-card-bottom">
-              <span>Next stage</span>
-              <p>Recovery and ROM work are active, but still under development.</p>
+              <span>In development</span>
+              <p>Recovery and custom OS work are active and open to real contributions.</p>
             </div>
           </div>
         </section>
@@ -132,9 +146,10 @@
             <p class="eyebrow">Current Projects</p>
             <h2>Two repos are ready to use right now</h2>
             <p>
-              The repos below cover the current public tooling for the TB351FU.
-              One focuses on the unlock path, and the other helps prepare Lenovo
-              firmware files for cleaner flashing work.
+              These are the two public repos people will need most often for
+              TB351FU work. One covers the unlock route, and the other helps
+              turn Lenovo firmware packages into something easier to work with
+              during flashing.
             </p>
           </div>
 
@@ -155,10 +170,8 @@
                 </div>
                 <h3>Bootloader Unlock</h3>
                 <p>
-                  This repo is aimed at advanced users and developers working on
-                  bootloader access for the Lenovo Tab Plus TB351FU. It focuses
-                  on the Linux-side flow, token generation and final unlock
-                  verification.
+                  Bootloader unlock steps, token handling and verification notes
+                  for people working from Linux on the Lenovo Tab Plus TB351FU.
                 </p>
 
                 <ul class="feature-list">
@@ -196,10 +209,9 @@
                 </div>
                 <h3>Lenovo Flash XML Helper</h3>
                 <p>
-                  This helper is for unpacking Lenovo firmware metadata and
-                  preparing a cleaner SP Flash Tool bundle for TB351FU work. It
-                  is useful when the stock package needs extra prep before
-                  flashing.
+                  Utility for decrypting Lenovo firmware metadata and preparing
+                  a cleaner SP Flash Tool package for TB351FU restores, testing
+                  and device-side work.
                 </p>
 
                 <ul class="feature-list">
@@ -228,8 +240,9 @@
             <p class="eyebrow">Development Status</p>
             <h2>Recovery and ROM work are still in progress</h2>
             <p>
-              If you want to help with bring-up, testing, logs or
-              development, contributions are welcome. Please do not spam for ETA.
+              Recovery and custom OS work are active. If you want to help with
+              bring-up, testing, logs or development, contributions are welcome.
+              Please do not spam for ETA.
             </p>
           </div>
 
@@ -242,9 +255,9 @@
               </div>
               <h3>Custom Recovery</h3>
               <p>
-                Recovery development for the TB351FU is underway. Help with
-                testing, logs, tree work and debugging is always useful while
-                bring-up continues.
+                Recovery development for the TB351FU is underway. Logs, tree
+                work, testing and debugging help are all useful while bring-up
+                continues.
               </p>
               <p class="status-note">
                 Development is ongoing. If you want to contribute, please help
@@ -268,9 +281,9 @@
               </div>
               <h3>Custom OS</h3>
               <p>
-                Custom OS bring-up is still in its development phase for the
-                TB351FU. Device trees, kernel work, testing and debugging help
-                are all welcome while the project moves forward.
+                Custom OS bring-up is still in progress for the TB351FU. Device
+                tree work, kernel-side fixes, testing and debugging help are
+                all welcome while the project moves forward.
               </p>
               <p class="status-note">
                 Development is ongoing. If you want to contribute, please help
@@ -294,8 +307,8 @@
             <h2>Downloads, pages and public profiles</h2>
             <p>
               The links below collect the main public pages for this project,
-              along with the file host and the placeholders that will be updated
-              later as more channels go live.
+              along with file hosting and the placeholders that will be updated
+              as more channels go live.
             </p>
           </div>
 
@@ -333,10 +346,15 @@
                   <strong>androidfilehost.com profile</strong>
                 </a>
 
-                <span class="resource-link resource-link-placeholder">
+                <a
+                  class="resource-link"
+                  href="https://xdaforums.com/m/pratik-gondane.7046254/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <span>XDA Page</span>
-                  <strong>[link here]</strong>
-                </span>
+                  <strong>xdaforums.com/m/pratik-gondane.7046254/</strong>
+                </a>
 
                 <span class="resource-link resource-link-placeholder">
                   <span>Telegram Channel</span>
@@ -353,10 +371,10 @@
             <article class="community-card">
               <h3>What visitors will find here</h3>
               <ul class="feature-list feature-list-compact">
-                <li>Current public tools for the Lenovo Tab Plus TB351FU.</li>
-                <li>Ongoing status for recovery and custom OS work.</li>
-                <li>Download and profile links in one place.</li>
-                <li>Clear placeholders for pages that will be added later.</li>
+                <li>Current public tools for Lenovo Tab Plus TB351FU work.</li>
+                <li>Status updates for recovery and custom OS development.</li>
+                <li>Download, profile and community links in one place.</li>
+                <li>Visible placeholders for pages that will be added later.</li>
               </ul>
             </article>
           </div>
@@ -365,19 +383,23 @@
         <section class="section profile-section reveal" id="about">
           <article class="profile-card">
             <p class="eyebrow">About</p>
-            <h2>Pratik Gondane</h2>
+            <h2>Hi, I&apos;m Pratik Gondane.</h2>
             <p>
-              Pratik is a computer science engineer with a diploma in Computer
-              Engineering, a B.E. in Computer Science and Engineering, and an
-              M.Tech. in Computer Science and Engineering. Most of his work
-              revolves around Android internals, Linux systems and low-level
-              device understanding.
+              I am a computer engineer with a diploma in Computer Engineering,
+              a B.E. in Computer Science and Engineering, and an M.Tech. in
+              Computer Science and Engineering. Most of my work sits around
+              Android internals, Linux systems and understanding devices at a
+              lower level.
             </p>
             <p>
-              Outside the usual coding workflow, he spends time on ROM
-              customization, system experimentation, performance tuning and
-              practical tooling around real hardware. This site exists to keep
-              TB351FU development in one public place.
+              I build and share tools that make TB351FU development easier,
+              from unlock workflows to firmware prep and ongoing bring-up work.
+              This site exists to keep the useful links, tools and project
+              status in one public place. If you need to reach me directly for
+              something useful, mail me at
+              <a class="inline-text-link" href="mailto:hellopratik@proton.me">
+                hellopratik@proton.me
+              </a>.
             </p>
 
             <div class="profile-actions">
@@ -396,6 +418,14 @@
                 rel="noreferrer"
               >
                 Android File Host
+              </a>
+              <a
+                class="button button-secondary"
+                href="https://xdaforums.com/m/pratik-gondane.7046254/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                XDA
               </a>
             </div>
           </article>
@@ -429,6 +459,16 @@
               >
                 <span>Instagram</span>
                 <strong>@hellopratik</strong>
+              </a>
+
+              <a
+                class="resource-link"
+                href="https://xdaforums.com/m/pratik-gondane.7046254/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>XDA</span>
+                <strong>pratik-gondane</strong>
               </a>
 
               <a

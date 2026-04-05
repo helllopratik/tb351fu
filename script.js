@@ -1,7 +1,50 @@
 const yearNode = document.querySelector("#year");
+const themeButtons = document.querySelectorAll(".theme-button");
+const themeStorageKey = "tb351fu-theme";
+const availableThemes = new Set(["ocean", "graphite", "amoled"]);
 
 if (yearNode) {
   yearNode.textContent = new Date().getFullYear();
+}
+
+const applyTheme = (themeName) => {
+  if (!availableThemes.has(themeName)) {
+    return;
+  }
+
+  document.body.dataset.theme = themeName;
+
+  themeButtons.forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.themeValue === themeName);
+  });
+
+  try {
+    localStorage.setItem(themeStorageKey, themeName);
+  } catch (error) {
+    // Ignore storage failures and keep the selected theme for the current session.
+  }
+};
+
+if (themeButtons.length > 0) {
+  let initialTheme = document.body.dataset.theme || "ocean";
+
+  try {
+    const savedTheme = localStorage.getItem(themeStorageKey);
+
+    if (savedTheme && availableThemes.has(savedTheme)) {
+      initialTheme = savedTheme;
+    }
+  } catch (error) {
+    // Ignore storage failures and keep the default theme.
+  }
+
+  applyTheme(initialTheme);
+
+  themeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      applyTheme(button.dataset.themeValue);
+    });
+  });
 }
 
 const revealNodes = document.querySelectorAll(".reveal");

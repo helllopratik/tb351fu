@@ -50,14 +50,33 @@
 
         <div class="header-actions">
           <div class="theme-switcher" role="group" aria-label="Choose color theme">
-            <button class="theme-button" type="button" data-theme-value="ocean">
-              Ocean
+            <span class="theme-switcher-label">Theme</span>
+            <button
+              class="theme-button"
+              type="button"
+              data-theme-value="ocean"
+              aria-label="Ocean theme"
+              title="Ocean"
+            >
+              <span class="theme-swatch theme-swatch-ocean" aria-hidden="true"></span>
             </button>
-            <button class="theme-button" type="button" data-theme-value="graphite">
-              Graphite
+            <button
+              class="theme-button"
+              type="button"
+              data-theme-value="graphite"
+              aria-label="Graphite theme"
+              title="Graphite"
+            >
+              <span class="theme-swatch theme-swatch-graphite" aria-hidden="true"></span>
             </button>
-            <button class="theme-button" type="button" data-theme-value="amoled">
-              AMOLED
+            <button
+              class="theme-button"
+              type="button"
+              data-theme-value="amoled"
+              aria-label="AMOLED theme"
+              title="AMOLED"
+            >
+              <span class="theme-swatch theme-swatch-amoled" aria-hidden="true"></span>
             </button>
           </div>
 
@@ -120,10 +139,10 @@
 
           <div class="hero-visual">
             <div class="hero-frame">
-              <div class="hero-frame-label">Lenovo Tab Plus</div>
+              <div class="hero-frame-label">Custom Device Artwork</div>
               <img
-                src="assets/lenovotab.jpeg"
-                alt="Lenovo Tab Plus TB351FU tablet"
+                src="assets/lenovotab-hero.webp"
+                alt="Custom Lenovo Tab Plus TB351FU hero artwork based on the device photo"
                 class="hero-banner hero-device-photo"
                 loading="eager"
               />

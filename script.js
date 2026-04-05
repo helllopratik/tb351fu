@@ -15,7 +15,10 @@ const applyTheme = (themeName) => {
   document.body.dataset.theme = themeName;
 
   themeButtons.forEach((button) => {
-    button.classList.toggle("is-active", button.dataset.themeValue === themeName);
+    const isActive = button.dataset.themeValue === themeName;
+
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
   });
 
   try {

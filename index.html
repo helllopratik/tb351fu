@@ -29,6 +29,7 @@
       Telegram Discussion group: https://t.me/+AI4y0BtIHQcwNGI1
       Recovery tree: https://github.com/helllopratik/twrp_device_lenovo_TB351FU
       Recovery download: [link here]
+      AVB Kill repo: https://github.com/helllopratik/TB351FU_AVB_Kill
       OS device tree: [link here]
       OS kernel tree: [link here]
       OS vendor tree: [link here]
@@ -167,12 +168,11 @@
         <section class="section reveal" id="projects">
           <div class="section-head">
             <p class="eyebrow">Current Projects</p>
-            <h2>Two repos are ready to use right now</h2>
+            <h2>Three repos are ready to use right now</h2>
             <p>
-              These are the two public repos people will need most often for
-              TB351FU work. One covers the unlock route, and the other helps
-              turn Lenovo firmware packages into something easier to work with
-              during flashing.
+              These are the main public repos for TB351FU work right now. They
+              cover the bootloader route, AVB and verification bypass work, and
+              Lenovo firmware prep for cleaner flashing.
             </p>
           </div>
 
@@ -267,6 +267,51 @@
                     <span class="action-card-title">Open GitHub Repo</span>
                     <small class="action-card-note">
                       XML helper source, usage steps and flash bundle generation details.
+                    </small>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-media">
+                <img
+                  src="assets/avbkill-banner.svg"
+                  alt="TB351FU AVB Kill suite banner"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-copy">
+                <div class="project-meta">
+                  <span class="pill">AVB</span>
+                  <span class="pill">VBMeta</span>
+                  <span class="pill">Fastboot</span>
+                </div>
+                <h3>TB351FU AVB Kill</h3>
+                <p>
+                  Standalone patcher for TB351FU AVB images. It modifies
+                  <code>vbmeta</code>, <code>vbmeta_system</code> and
+                  <code>vbmeta_vendor</code> so boot verification checks can be
+                  disabled during bring-up, recovery work and custom
+                  modification testing.
+                </p>
+
+                <ul class="feature-list">
+                  <li>Patches the three required AVB-related vbmeta images.</li>
+                  <li>Includes a simple fastboot install script for flashing.</li>
+                  <li>Useful when modified partitions trigger AVB verification failures.</li>
+                </ul>
+
+                <div class="project-links project-links-single">
+                  <a
+                    class="action-card"
+                    href="https://github.com/helllopratik/TB351FU_AVB_Kill"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span class="action-card-title">Open GitHub Repo</span>
+                    <small class="action-card-note">
+                      AVB patcher source, usage steps and flashing workflow for TB351FU.
                     </small>
                   </a>
                 </div>

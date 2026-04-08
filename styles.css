@@ -769,6 +769,13 @@ code {
   margin-top: 20px;
 }
 
+.status-resource-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
 .status-link {
   display: inline-flex;
   align-items: center;
@@ -976,6 +983,10 @@ code {
     display: flex;
     flex-direction: column;
     gap: 14px;
+  }
+
+  .status-resource-list {
+    grid-template-columns: 1fr;
   }
 
   .hero-frame {

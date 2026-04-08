@@ -205,20 +205,26 @@
 
                 <div class="project-links">
                   <a
-                    class="inline-link"
+                    class="action-card"
                     href="https://github.com/helllopratik/lenovo_tb351fu_bootloader_unlock"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Open GitHub Repo
+                    <span class="action-card-title">Open GitHub Repo</span>
+                    <small class="action-card-note">
+                      Bootloader unlock scripts, setup notes and workflow details.
+                    </small>
                   </a>
                   <a
-                    class="inline-link"
+                    class="action-card"
                     href="https://www.youtube.com/watch?v=SAwgAutwB2s&amp;t=374s"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Watch Flash Video
+                    <span class="action-card-title">Watch Flash Video</span>
+                    <small class="action-card-note">
+                      Step-by-step walkthrough for the flashing part of the unlock process.
+                    </small>
                   </a>
                 </div>
               </div>
@@ -251,14 +257,17 @@
                   <li>Builds a flash-ready <code>sp_flash_tool_bundle/</code>.</li>
                 </ul>
 
-                <div class="project-links">
+                <div class="project-links project-links-single">
                   <a
-                    class="inline-link"
+                    class="action-card"
                     href="https://github.com/helllopratik/lenovo_flash_xml_helper_TB351FU"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Open GitHub Repo
+                    <span class="action-card-title">Open GitHub Repo</span>
+                    <small class="action-card-note">
+                      XML helper source, usage steps and flash bundle generation details.
+                    </small>
                   </a>
                 </div>
               </div>
@@ -297,18 +306,22 @@
               </p>
               <div class="status-resource-list">
                 <a
-                  class="resource-link"
+                  class="action-card"
                   href="https://github.com/helllopratik/twrp_device_lenovo_TB351FU"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span>Custom Recovery Tree</span>
-                  <strong>github.com/helllopratik/twrp_device_lenovo_TB351FU</strong>
+                  <span class="action-card-title">Open Recovery Tree</span>
+                  <small class="action-card-note">
+                    Current TWRP device tree used for TB351FU recovery bring-up.
+                  </small>
                 </a>
-                <span class="resource-link resource-link-placeholder">
-                  <span>Download Custom Recovery</span>
-                  <strong>[link here]</strong>
-                </span>
+                <button class="action-card action-card-disabled" type="button" disabled>
+                  <span class="action-card-title">Download Custom Recovery</span>
+                  <small class="action-card-note">
+                    Disabled for now. A public recovery build is not available yet.
+                  </small>
+                </button>
               </div>
             </article>
 
@@ -331,22 +344,30 @@
                 ETA.
               </p>
               <div class="status-resource-list">
-                <span class="resource-link resource-link-placeholder">
-                  <span>Device Tree</span>
-                  <strong>[link here]</strong>
-                </span>
-                <span class="resource-link resource-link-placeholder">
-                  <span>Kernel Tree</span>
-                  <strong>[link here]</strong>
-                </span>
-                <span class="resource-link resource-link-placeholder">
-                  <span>Vendor Tree</span>
-                  <strong>[link here]</strong>
-                </span>
-                <span class="resource-link resource-link-placeholder">
-                  <span>Firmware Tree</span>
-                  <strong>[link here]</strong>
-                </span>
+                <button class="action-card action-card-disabled" type="button" disabled>
+                  <span class="action-card-title">Device Tree</span>
+                  <small class="action-card-note">
+                    Disabled for now. The public device tree is not available yet.
+                  </small>
+                </button>
+                <button class="action-card action-card-disabled" type="button" disabled>
+                  <span class="action-card-title">Kernel Tree</span>
+                  <small class="action-card-note">
+                    Disabled for now. The public kernel tree is not available yet.
+                  </small>
+                </button>
+                <button class="action-card action-card-disabled" type="button" disabled>
+                  <span class="action-card-title">Vendor Tree</span>
+                  <small class="action-card-note">
+                    Disabled for now. The public vendor tree is not available yet.
+                  </small>
+                </button>
+                <button class="action-card action-card-disabled" type="button" disabled>
+                  <span class="action-card-title">Firmware Tree</span>
+                  <small class="action-card-note">
+                    Disabled for now. The public firmware tree is not available yet.
+                  </small>
+                </button>
               </div>
             </article>
           </div>

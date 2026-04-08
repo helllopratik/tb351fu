@@ -408,12 +408,22 @@ code {
 }
 
 .hero-actions,
-.profile-actions,
-.project-links {
+.profile-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 28px;
+}
+
+.project-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.project-links-single {
+  grid-template-columns: 1fr;
 }
 
 .button {
@@ -718,6 +728,88 @@ code {
   color: var(--accent);
 }
 
+.action-card {
+  appearance: none;
+  font: inherit;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  min-height: 88px;
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+    var(--surface);
+  color: var(--text);
+  text-align: left;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.14);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.action-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.action-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-line);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
+    var(--surface);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.2);
+}
+
+.action-card-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.action-card-note {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.action-card:not(.action-card-disabled)::after {
+  content: "Open ↗";
+  margin-top: auto;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.action-card-disabled {
+  cursor: not-allowed;
+  border-style: dashed;
+  border-color: rgba(255, 255, 255, 0.12);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01)),
+    var(--surface-soft);
+  box-shadow: none;
+}
+
+.action-card-disabled:hover {
+  transform: none;
+  border-color: rgba(255, 255, 255, 0.12);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01)),
+    var(--surface-soft);
+  box-shadow: none;
+}
+
 .workflow-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -985,6 +1077,7 @@ code {
     gap: 14px;
   }
 
+  .project-links,
   .status-resource-list {
     grid-template-columns: 1fr;
   }

@@ -379,38 +379,58 @@
               <h3>Custom OS</h3>
               <p>
                 Custom OS bring-up for the TB351FU is currently targeting
-                LineageOS. Device tree, kernel, vendor and firmware work are
-                still in progress, and contributions are welcome while the
-                bring-up moves forward.
+                LineageOS. The device, kernel and vendor trees are now public,
+                while firmware packaging work is still being cleaned up for a
+                safer release. Contributions are welcome while bring-up moves
+                forward.
               </p>
               <p class="status-note">
-                Current ROM target is LineageOS. If you want to help with
-                development or testing, please contribute and do not spam for
-                ETA.
+                Current ROM target is LineageOS. The public trees below show
+                the current bring-up base. Please contribute if you want to
+                help, and do not spam for ETA.
               </p>
               <div class="status-resource-list">
-                <button class="action-card action-card-disabled" type="button" disabled>
-                  <span class="action-card-title">Device Tree</span>
+                <a
+                  class="action-card"
+                  href="https://github.com/helllopratik/android_device_lenovo_tb351fu"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span class="action-card-title">Open Device Tree</span>
                   <small class="action-card-note">
-                    Disabled for now. The public device tree is not available yet.
+                    LineageOS-targeted TB351FU device tree with board config,
+                    fstab, DTBO and product wiring for Android 16 bring-up.
                   </small>
-                </button>
-                <button class="action-card action-card-disabled" type="button" disabled>
-                  <span class="action-card-title">Kernel Tree</span>
+                </a>
+                <a
+                  class="action-card"
+                  href="https://github.com/helllopratik/android_kernel_lenovo_tb351fu"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span class="action-card-title">Open Kernel Tree</span>
                   <small class="action-card-note">
-                    Disabled for now. The public kernel tree is not available yet.
+                    Lenovo-source-based TB351FU kernel tree adapted for custom
+                    development and Android 16 compatibility work.
                   </small>
-                </button>
-                <button class="action-card action-card-disabled" type="button" disabled>
-                  <span class="action-card-title">Vendor Tree</span>
+                </a>
+                <a
+                  class="action-card"
+                  href="https://github.com/helllopratik/android_vendor_lenovo_tb351fu"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span class="action-card-title">Open Vendor Tree</span>
                   <small class="action-card-note">
-                    Disabled for now. The public vendor tree is not available yet.
+                    Public vendor definitions for TB351FU. Proprietary blobs are
+                    intentionally excluded from the repo.
                   </small>
-                </button>
+                </a>
                 <button class="action-card action-card-disabled" type="button" disabled>
                   <span class="action-card-title">Firmware Tree</span>
                   <small class="action-card-note">
-                    Disabled for now. The public firmware tree is not available yet.
+                    Disabled for now. Firmware packaging is still being cleaned
+                    up before a public release.
                   </small>
                 </button>
               </div>

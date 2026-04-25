@@ -27,12 +27,12 @@
       YouTube page: https://www.youtube.com/@yourrom3328
       Bootloader flash video: https://www.youtube.com/watch?v=SAwgAutwB2s&t=374s
       Telegram Discussion group: https://t.me/+AI4y0BtIHQcwNGI1
-      Recovery tree: https://github.com/helllopratik/twrp_device_lenovo_TB351FU
-      Recovery download: [link here]
+      Recovery tree: https://github.com/helllopratik/twrp_device_lenovo_tb351fu
+      Recovery download: https://github.com/helllopratik/twrp_device_lenovo_tb351fu/releases/download/17.5.10.073/OrangeFox-tb351fu.img
       AVB Kill repo: https://github.com/helllopratik/TB351FU_AVB_Kill
-      OS device tree: [link here]
-      OS kernel tree: [link here]
-      OS vendor tree: [link here]
+      OS device tree: https://github.com/helllopratik/android_device_lenovo_tb351fu
+      OS kernel tree: https://github.com/helllopratik/android_kernel_lenovo_tb351fu
+      OS vendor tree: https://github.com/helllopratik/android_vendor_lenovo_tb351fu
       OS firmware tree: [link here]
     -->
 
@@ -136,8 +136,8 @@
                 <span>XML helper and SP Flash Tool bundle preparation</span>
               </article>
               <article>
-                <strong>In Progress</strong>
-                <span>Recovery and ROM bring-up with contributions welcome</span>
+                <strong>Active</strong>
+                <span>Recovery available and custom ROM work in progress</span>
               </article>
             </div>
           </div>
@@ -159,8 +159,8 @@
             </div>
 
             <div class="floating-card floating-card-bottom">
-              <span>In development</span>
-              <p>Recovery and custom OS work are active and open to real contributions.</p>
+              <span>Active</span>
+              <p>Recovery is ready and custom OS work is open to real contributions.</p>
             </div>
           </div>
         </section>
@@ -334,60 +334,73 @@
           <div class="status-grid">
             <article class="status-card" id="custom-recovery">
               <div class="project-meta">
-                <span class="pill">Ongoing</span>
+                <span class="pill">Public Alpha</span>
                 <span class="pill">Recovery</span>
-                <span class="pill">Contributions welcome</span>
+                <span class="pill">OrangeFox</span>
               </div>
               <h3>Custom Recovery</h3>
               <p>
-                Recovery work for the TB351FU is still not fully built. The
-                current TWRP device tree is the working base, and help with
-                bring-up, testing, logs and fixes is welcome if you want to
-                contribute.
+                OrangeFox Recovery is now available for the TB351FU. Note that 
+                this is an early build with known issues. It is intended for 
+                users who want to flash decryption scripts or for developers 
+                looking to contribute to the bring-up.
               </p>
+              
+              <ul class="feature-list feature-list-compact">
+                <li><strong>Touch Screen:</strong> Not working. Use Volume buttons or a USB OTG mouse to navigate.</li>
+                <li><strong>Encryption:</strong> Internal storage is inaccessible due to Android encryption.</li>
+                <li><strong>Storage Access:</strong> Formatting Data will allow access, or you can try flashing a decryption script.</li>
+                <li><strong>Warning:</strong> Flashing decryption scripts may prevent the device from booting; use with caution.</li>
+              </ul>
+
               <p class="status-note">
-                Recovery is still incomplete. If you can help with development
-                or testing, contributions are welcome while bring-up continues.
+                Initial build (17.5.10.073) is public. Recommended only for 
+                advanced users and contributors.
               </p>
               <div class="status-resource-list">
                 <a
                   class="action-card"
-                  href="https://github.com/helllopratik/twrp_device_lenovo_TB351FU"
+                  href="https://github.com/helllopratik/twrp_device_lenovo_tb351fu"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <span class="action-card-title">Open Recovery Tree</span>
                   <small class="action-card-note">
-                    Current TWRP device tree used for TB351FU recovery bring-up.
+                    Current TWRP/OrangeFox device tree used for TB351FU recovery.
                   </small>
                 </a>
-                <button class="action-card action-card-disabled" type="button" disabled>
+                <a
+                  class="action-card"
+                  href="https://github.com/helllopratik/twrp_device_lenovo_tb351fu/releases/download/17.5.10.073/OrangeFox-tb351fu.img"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <span class="action-card-title">Download Custom Recovery</span>
                   <small class="action-card-note">
-                    Disabled for now. A public recovery build is not available yet.
+                    Public recovery build (OrangeFox-tb351fu.img). See notes above.
                   </small>
-                </button>
+                </a>
               </div>
             </article>
 
             <article class="status-card" id="custom-os">
               <div class="project-meta">
-                <span class="pill">Ongoing</span>
+                <span class="pill">Under Building</span>
                 <span class="pill">Custom OS</span>
                 <span class="pill">Contributions welcome</span>
               </div>
               <h3>Custom OS</h3>
               <p>
                 Custom OS bring-up for the TB351FU is currently targeting
-                LineageOS. The device, kernel and vendor trees are now public,
-                while firmware packaging work is still being cleaned up for a
-                safer release. Contributions are welcome while bring-up moves
-                forward.
+                LineageOS. While the device, kernel, and vendor trees are public 
+                for development, the actual OS builds are still <strong>under 
+                construction</strong>. Firmware packaging and stability work 
+                continue before a public release.
               </p>
               <p class="status-note">
-                Current ROM target is LineageOS. The public trees below show
-                the current bring-up base. Please contribute if you want to
-                help, and do not spam for ETA.
+                Current ROM target is LineageOS. The project is in the active 
+                building phase. You can track progress or contribute using the 
+                source trees below.
               </p>
               <div class="status-resource-list">
                 <a
@@ -399,7 +412,7 @@
                   <span class="action-card-title">Open Device Tree</span>
                   <small class="action-card-note">
                     LineageOS-targeted TB351FU device tree with board config,
-                    fstab, DTBO and product wiring for Android 16 bring-up.
+                    fstab, DTBO and product wiring for bring-up.
                   </small>
                 </a>
                 <a
@@ -411,7 +424,7 @@
                   <span class="action-card-title">Open Kernel Tree</span>
                   <small class="action-card-note">
                     Lenovo-source-based TB351FU kernel tree adapted for custom
-                    development and Android 16 compatibility work.
+                    development and ROM compatibility work.
                   </small>
                 </a>
                 <a

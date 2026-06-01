@@ -162,17 +162,26 @@
               <span>Active</span>
               <p>Recovery is ready and custom OS work is open to real contributions.</p>
             </div>
+
+            <div class="floating-card floating-card-warning">
+              <span>Update Note</span>
+              <p>
+                OTA updates may fail after modifications. To update or relock, 
+                use SP Flash Tool with the "Firmware Upgrade" option when new 
+                official Lenovo firmware is released.
+              </p>
+            </div>
           </div>
         </section>
 
         <section class="section reveal" id="projects">
           <div class="section-head">
             <p class="eyebrow">Current Projects</p>
-            <h2>Three repos are ready to use right now</h2>
+            <h2>Four repos are ready to use right now</h2>
             <p>
               These are the main public repos for TB351FU work right now. They
-              cover the bootloader route, AVB and verification bypass work, and
-              Lenovo firmware prep for cleaner flashing.
+              cover the bootloader route, AVB and verification bypass work, 
+              region lock modification, and Lenovo firmware prep.
             </p>
           </div>
 
@@ -255,6 +264,7 @@
                   <li>Decrypts Lenovo <code>.x</code> firmware metadata.</li>
                   <li>Checks the XML structure and referenced image files.</li>
                   <li>Builds a flash-ready <code>sp_flash_tool_bundle/</code>.</li>
+                  <li>GUI support is currently being added for easier usage.</li>
                 </ul>
 
                 <div class="project-links project-links-single">
@@ -312,6 +322,48 @@
                     <span class="action-card-title">Open GitHub Repo</span>
                     <small class="action-card-note">
                       AVB patcher source, usage steps and flashing workflow for TB351FU.
+                    </small>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-media">
+                <img
+                  src="assets/unlock-banner.svg"
+                  alt="TB351FU Region Tool banner"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-copy">
+                <div class="project-meta">
+                  <span class="pill">Region</span>
+                  <span class="pill">Lock</span>
+                  <span class="pill">Experimental</span>
+                </div>
+                <h3>TB351FU Region Tool</h3>
+                <p>
+                  A utility that allows users to change the device region lock 
+                  on the Lenovo Tab Plus TB351FU.
+                </p>
+
+                <ul class="feature-list">
+                  <li>Change device region lock settings.</li>
+                  <li><strong>Status:</strong> Still unstable/experimental.</li>
+                  <li>Needs other developers to fix/improve if needed.</li>
+                </ul>
+
+                <div class="project-links project-links-single">
+                  <a
+                    class="action-card"
+                    href="https://github.com/helllopratik/tb351fu_region_tool"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span class="action-card-title">Open GitHub Repo</span>
+                    <small class="action-card-note">
+                      Region tool source, current status and experimental notes.
                     </small>
                   </a>
                 </div>
@@ -375,12 +427,39 @@
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span class="action-card-title">Download Custom Recovery</span>
+                  <span class="action-card-title">Download OrangeFox</span>
                   <small class="action-card-note">
                     Public recovery build (OrangeFox-tb351fu.img). See notes above.
                   </small>
                 </a>
+                <a
+                  class="action-card"
+                  href="https://github.com/helllopratik/twrp_device_lenovo_tb351fu/releases/tag/17.5.10.110"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span class="action-card-title">Download Lineage Recovery</span>
+                  <small class="action-card-note">
+                    Alternative recovery build for LineageOS compatibility.
+                  </small>
+                </a>
               </div>
+
+              <details class="details-changelog">
+                <summary>View Lineage Recovery Changelog</summary>
+                <div class="details-content">
+                  <p>Working</p>
+                  <ul class="feature-list feature-list-compact">
+                    <li>ADB sideload</li>
+                    <li>ZIP Installation</li>
+                  </ul>
+                  <p>Not working</p>
+                  <ul class="feature-list feature-list-compact">
+                    <li>MTP</li>
+                    <li>Touch (Use buttons/OTG)</li>
+                  </ul>
+                </div>
+              </details>
             </article>
 
             <article class="status-card" id="custom-os">

@@ -576,8 +576,20 @@ code {
 
 .floating-card-bottom {
   bottom: 4px;
-  left: 0;
+  left: -20px;
   animation-delay: -2.5s;
+}
+
+.floating-card-warning {
+  bottom: 120px;
+  right: -30px;
+  border-color: rgba(255, 185, 94, 0.3);
+  background: rgba(20, 15, 10, 0.92);
+  animation-delay: -1.2s;
+}
+
+.floating-card-warning span {
+  color: var(--accent-strong);
 }
 
 .section {
@@ -866,6 +878,58 @@ code {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
   margin-top: 20px;
+}
+
+.details-changelog {
+  margin-top: 16px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--surface-soft);
+}
+
+.details-changelog summary {
+  padding: 14px 18px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 180ms ease;
+}
+
+.details-changelog summary::-webkit-details-marker {
+  display: none;
+}
+
+.details-changelog summary::after {
+  content: "↓";
+  font-size: 1.1rem;
+  color: var(--accent);
+  transition: transform 220ms ease;
+}
+
+.details-changelog[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.details-changelog summary:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.details-content {
+  padding: 0 18px 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.details-content p {
+  margin: 14px 0 8px !important;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text);
 }
 
 .status-link {

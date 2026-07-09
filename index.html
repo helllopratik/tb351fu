@@ -155,12 +155,12 @@
 
             <div class="floating-card floating-card-top">
               <span style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-                <span>LineageOS Beta</span>
+                <span>LineageOS</span>
                 <span style="font-size: 0.7rem; padding: 2px 6px; border-radius: 6px; background: rgba(103, 232, 200, 0.15); border: 1px solid rgba(103, 232, 200, 0.3); color: var(--accent); margin-bottom: 0; text-transform: uppercase; font-family: sans-serif; font-weight: 700;">Active</span>
               </span>
               <p>
-                LineageOS beta version is ready to use and will be available for download in the coming days. 
-                It will remain an unofficial build as it contains third-party integrations like Dolby and Game Assistant.
+                LineageOS is ready to use and available for download now.
+                Unofficial build &mdash; includes third-party integrations like Dolby &amp; Game Assistant.
               </p>
             </div>
 
@@ -374,7 +374,7 @@
         <section class="section reveal" id="development">
           <div class="section-head">
             <p class="eyebrow">Development Status</p>
-            <h2>Recovery is active and LineageOS Beta is ready</h2>
+            <h2>Recovery is active and LineageOS is ready to use</h2>
             <p>
               OrangeFox Recovery and LineageOS Beta custom OS are now ready to use. Download links are given below.
             </p>
@@ -465,7 +465,7 @@
 
             <article class="status-card" id="custom-os">
               <div class="project-meta">
-                <span class="pill">Beta Ready</span>
+                <span class="pill">Ready to Use</span>
                 <span class="pill">Custom OS</span>
                 <span class="pill">Unofficial</span>
               </div>
@@ -481,14 +481,78 @@
 
               <h3>Custom OS</h3>
               <p>
-                LineageOS Beta is now ready to use! Please note that LineageOS will always be an unofficial build because it includes proprietary third-party applications like Dolby and Game Assistant. Download links can be found below.
+                LineageOS is now ready to use and available for download! Please note that this build will always remain unofficial as it includes proprietary third-party integrations like Dolby and Game Assistant. Download links are available below.
               </p>
               <p class="status-note">
-                Current ROM target: LineageOS (Android 16). The custom ROM is fully functional and ready for testing.
+                Current ROM: LineageOS (Android 16). Fully functional — download it now via Mega.nz or Telegram.
               </p>
-              <p class="status-note" style="border-color: rgba(255, 185, 94, 0.25); background: rgba(20, 15, 10, 0.4); margin-top: 10px;">
-                <strong>Testers Wanted:</strong> Volunteers are required to test the OS functionality. If there are few or no volunteer testers, the OS will be released directly (expect a few initial bugs).
+              <p class="status-note" style="border-color: rgba(103, 232, 200, 0.2); background: rgba(6, 20, 30, 0.5); margin-top: 10px;">
+                <strong>&#8987; First Boot:</strong> Initial boot may take <strong>4&ndash;5 minutes</strong>. This is normal &mdash; please do not interrupt the process.
               </p>
+
+              <details class="details-changelog" style="margin-top: 12px;">
+                <summary>Known Issues &amp; Notes</summary>
+                <div class="details-content">
+
+                  <p style="margin: 0 0 12px; color: var(--accent-strong); font-weight: 600;">Stylus Pen</p>
+                  <ul class="feature-list feature-list-compact">
+                    <li><strong>Button bug:</strong> Pressing the stylus button activates the eraser mode in Nebo and it may stay stuck there. To return to draw mode, double-press the button or hold it for ~5 seconds. A temporary workaround is to disconnect Bluetooth and reconnect.</li>
+                    <li><strong>Remote Control &amp; some pen features:</strong> Disabled / not functional in this build.</li>
+                    <li><strong>Palm Rejection:</strong> Supported and working.</li>
+                  </ul>
+
+                  <p style="margin: 16px 0 12px; color: var(--accent-strong); font-weight: 600;">System</p>
+                  <ul class="feature-list feature-list-compact">
+                    <li><strong>Settings crash:</strong> Navigating to <em>Settings &rarr; System &rarr; Language &amp; Region</em> will cause the Settings app to crash.</li>
+                    <li><strong>GApps:</strong> Included in this build.</li>
+                  </ul>
+
+                  <p style="margin: 16px 0 8px; color: var(--muted); font-size: 0.82rem; line-height: 1.6; border-top: 1px solid var(--line); padding-top: 12px;">
+                    <strong>Disclaimer:</strong> This build is provided as-is, without any warranty, express or implied. By downloading and flashing this ROM, you acknowledge that you do so entirely at your own risk. The developer assumes no liability for any damage, data loss, or malfunction that may result from its use. Your device warranty may be affected. Proceed only if you understand and accept these terms.
+                  </p>
+
+                </div>
+              </details>
+
+              <details class="details-changelog" style="margin-top: 16px;">
+                <summary>View Installation Guide</summary>
+                <div class="details-content">
+
+                  <p style="margin: 0 0 12px; color: var(--accent-strong); font-weight: 600;">Path A &mdash; Coming from Stock Recovery</p>
+                  <ol class="feature-list feature-list-compact" style="list-style: decimal; padding-left: 20px;">
+                    <li>Reboot into stock recovery.</li>
+                    <li>Enter <strong>Fastbootd mode</strong> (not Bootloader/Fastboot &mdash; select <em>Enter Fastbootd</em>).</li>
+                    <li>Connect your PC via USB.</li>
+                    <li>Flash only <code>vendor_boot.img</code> from the ROM folder.</li>
+                    <li>Power off the device, or reboot back into recovery via bootloader or from the system. <strong>Do not</strong> select &ldquo;Reboot to Recovery&rdquo; from the stock Fastbootd menu.</li>
+                    <li>Once in Lineage Recovery, perform a <strong>Factory Reset (wipe data)</strong>.</li>
+                    <li>Go to <strong>Fastbootd mode</strong> again.</li>
+                    <li>Run <code>./flash.sh</code> from the ROM folder on your PC. &mdash; This flashes all required partitions.</li>
+                    <li>Reboot and enjoy LineageOS.</li>
+                  </ol>
+
+                  <p style="margin: 16px 0 12px; color: var(--accent-strong); font-weight: 600;">Path B &mdash; Already on Lineage Recovery</p>
+                  <ol class="feature-list feature-list-compact" style="list-style: decimal; padding-left: 20px;">
+                    <li>Reboot into <strong>Lineage Recovery</strong>.</li>
+                    <li>Perform a <strong>Factory Reset (wipe data)</strong> first &mdash; do this before flashing any images.</li>
+                    <li>Enter <strong>Fastbootd mode</strong> from recovery.</li>
+                    <li>Connect your PC and run <code>./flash.sh</code> from the ROM folder.</li>
+                    <li>Reboot and enjoy LineageOS.</li>
+                  </ol>
+
+                  <p style="margin: 16px 0 8px; color: var(--muted); font-size: 0.85rem;">
+                    <strong>&#9888; Important:</strong> Always factory reset <em>before</em> flashing custom images to avoid boot issues.
+                  </p>
+
+                  <p style="margin: 16px 0 12px; color: var(--accent-strong); font-weight: 600;">Restore to Stock</p>
+                  <ol class="feature-list feature-list-compact" style="list-style: decimal; padding-left: 20px;">
+                    <li>Enter <strong>Fastbootd mode</strong> or use <strong>SP Flash Tool</strong>.</li>
+                    <li>Flash <code>super.img</code> from the stock firmware.</li>
+                    <li><strong>Format data</strong> (required) before booting back into stock firmware.</li>
+                  </ol>
+
+                </div>
+              </details>
               <div class="status-resource-list">
                 <a
                   class="action-card"
@@ -526,12 +590,17 @@
                     intentionally excluded from the repo.
                   </small>
                 </a>
-                <button class="action-card action-card-disabled" type="button" disabled>
+                <a
+                  class="action-card"
+                  href="https://mega.nz/folder/G1wBFbLB#x_TEF6RH4DVJCCIgyLlnLg"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <span class="action-card-title">Download from Mega.nz</span>
                   <small class="action-card-note">
-                    Will be available when released.
+                    Download the LineageOS A16 build directly from Mega.nz.
                   </small>
-                </button>
+                </a>
                 <button class="action-card action-card-disabled" type="button" disabled>
                   <span class="action-card-title">Download from AndroidFileHost</span>
                   <small class="action-card-note">
